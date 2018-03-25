@@ -1,4 +1,6 @@
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 
 /*
@@ -20,11 +22,39 @@ public class FrameScreen extends JFrame{
         gameScreen = new GameScreen();
         add(gameScreen);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.addKeyListener(new handler());
+        
         setVisible(true);
+
     }
+    
     public static void main(String[] args) {
         FrameScreen f = new FrameScreen();
-//        f.setVisible(true);
-//        f.setSize(500,500);
+    }
+    
+    private class handler implements KeyListener {
+
+        @Override
+        public void keyTyped(KeyEvent e) {}
+
+        @Override
+        public void keyPressed(KeyEvent e) {
+            if(e.getKeyCode()==KeyEvent.VK_UP){
+                gameScreen.snake.setVector(Snake.GO_UP);
+            }
+            if(e.getKeyCode()==KeyEvent.VK_DOWN){
+                gameScreen.snake.setVector(Snake.GO_DOWN);
+            }
+            if(e.getKeyCode()==KeyEvent.VK_LEFT){
+                gameScreen.snake.setVector(Snake.GO_LEFT);
+            }
+            if(e.getKeyCode()==KeyEvent.VK_RIGHT){
+                gameScreen.snake.setVector(Snake.GO_RIGHT);
+            }
+        }
+
+        @Override
+        public void keyReleased(KeyEvent e) {}
+        
     }
 }
