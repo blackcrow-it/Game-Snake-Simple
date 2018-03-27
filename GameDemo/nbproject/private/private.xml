@@ -5,6 +5,11 @@
         <group>
             <file>file:/D:/Java/Game-Snake-Simple/GameDemo/src/FrameScreen.java</file>
             <file>file:/D:/Java/Game-Snake-Simple/GameDemo/src/Snake.java</file>
+            <file>file:/D:/Java/Game-Snake-Simple/GameDemo/src/GameScreen.java</file>
+            <file>file:/D:/Java/Game-Snake-Simple/GameDemo/src/Animation.java</file>
+            <file>file:/D:/Java/Game-Snake-Simple/GameDemo/src/Data.java</file>
+            <file>file:/D:/Java/Game-Snake-Simple/GameDemo/src/User.java</file>
+            <file>file:/D:/Java/Game-Snake-Simple/GameDemo/data/data.txt</file>
         </group>
     </open-files>
 </project-private>
